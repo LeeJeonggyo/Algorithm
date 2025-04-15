@@ -14,3 +14,4 @@
 
 | 플랫폼     | 문제 이름        | 링크 | 풀이                                             |
 |-----------|----------------|------|------------------------------------------------|
+| 프로그래머스  | 합승 택시 요금    | [문제](https://school.programmers.co.kr/learn/courses/30/lessons/72413) | [풀이](./Programmers/Level3/SharedTaxiFare.java) |
