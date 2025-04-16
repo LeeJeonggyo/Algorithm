@@ -1,3 +1,4 @@
+import Programmers.Level2.TowerOfHanoi;
 import Programmers.Level3.SharedTaxiFare;
 import java.io.*;
 import java.util.StringTokenizer;
@@ -5,7 +6,25 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        sharedTaxiFareSolution2();
+        towerOfHanoiSolution();
+    }
+
+
+    /** ===========================================================
+     * 합승 택시 요금 - Dijkstra::우선순위 큐를 사용해서 구현
+     * =========================================================== */
+    private static void towerOfHanoiSolution() throws IOException{
+        /* ===========================================================
+         * TEST CASE
+         * 2
+         * =========================================================== */
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+
+        int[][] result = TowerOfHanoi.solution(n);
+        for(int[] data : result){
+            System.out.printf("[%d, %d]\n",data[0],data[1]);
+        }
     }
 
     /** ===========================================================
