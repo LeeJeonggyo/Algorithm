@@ -44,12 +44,7 @@
 |-------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | 다익스트라 | [폴더](https://github.com/LeeJeonggyo/Algorithm/blob/dd0f3004af358fd6d9b36d9b5a08073615c83842/src/Algorithm/dijkstra) | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/dijkstra/README.md)  |
 | 재귀    | -                                                                                                                   | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/recursive/README.md) |
-
-[//]: # (| DP | 계단 오르기, RGB거리 | 점화식 기반 문제 |)
-
-[//]: # (| 구현 | 로봇 청소기, 톱니바퀴 | 조건에 따른 시뮬레이션 |)
-
-[//]: # (| 자료구조 | 큐, 우선순위큐 | Heap/Deque 등 활용 |)
+| 브루트포스 | -                                                                                                                   | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/brute_force/README.md) |
 
 ---
 

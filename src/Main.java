@@ -1,3 +1,4 @@
+import Programmers.Level2.PowerGridDivideTwo;
 import Programmers.Level2.TowerOfHanoi;
 import Programmers.Level3.SharedTaxiFare;
 import java.io.*;
@@ -6,7 +7,30 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        towerOfHanoiSolution();
+        powerGridDivideTwoSolution();
+    }
+
+
+    /** ===========================================================
+     * 합승 택시 요금 - Dijkstra::우선순위 큐를 사용해서 구현
+     * =========================================================== */
+    private static void powerGridDivideTwoSolution() throws IOException{
+        /* ===========================================================
+         * TEST CASE
+         * 9
+         * 1 3 2 3 3 4 4 5 4 6 4 7 7 8 7 9
+         * =========================================================== */
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int[][] wires = new int[st.countTokens()/2][2];
+        int i = 0;
+        while(st.hasMoreTokens()){
+            wires[i++] = new int[]{Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
+        }
+
+        int result = PowerGridDivideTwo.solution(n, wires);
+        System.out.print(result);
     }
 
 
