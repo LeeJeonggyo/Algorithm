@@ -40,11 +40,12 @@
 
 ## 🧠 알고리즘
 
-| 알고리즘  | 구현                                                                                                                  | README.md                                                                                                                      |
-|-------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| 다익스트라 | [폴더](https://github.com/LeeJeonggyo/Algorithm/blob/dd0f3004af358fd6d9b36d9b5a08073615c83842/src/Algorithm/dijkstra) | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/dijkstra/README.md)  |
-| 재귀    | -                                                                                                                   | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/recursive/README.md) |
-| 브루트포스 | -                                                                                                                   | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/brute_force/README.md) |
+| 알고리즘        | 구현                                                                                                                  | README.md                                                                                                                          |
+|-------------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| 다익스트라       | [폴더](https://github.com/LeeJeonggyo/Algorithm/blob/dd0f3004af358fd6d9b36d9b5a08073615c83842/src/Algorithm/dijkstra) | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/dijkstra/README.md)      |
+| 재귀          | -                                                                                                                   | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/recursive/README.md)     |
+| 브루트포스       | -                                                                                                                   | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/brute_force/README.md)   |
+| 이진탐색 (이분탐색) | -                                                                                                                   | [파일](https://github.com/LeeJeonggyo/Algorithm/blob/447208965b3dcb31a98bc10b54a99d122272edc8/src/Algorithm/binary_seqrch/README.md) |
 
 ---
 

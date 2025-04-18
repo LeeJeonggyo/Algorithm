@@ -1,5 +1,6 @@
 import Programmers.Level2.PowerGridDivideTwo;
 import Programmers.Level2.TowerOfHanoi;
+import Programmers.Level3.GoldSilverCarry;
 import Programmers.Level3.SharedTaxiFare;
 import java.io.*;
 import java.util.StringTokenizer;
@@ -7,7 +8,55 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        powerGridDivideTwoSolution();
+        goldSilverCarrySolution();
+    }
+
+
+    /** ===========================================================
+     *
+     * =========================================================== */
+    private static void goldSilverCarrySolution() throws IOException{
+        /* ===========================================================
+         * TEST CASE
+         * 10
+         * 10
+         * 100
+         * 100
+         * 7
+         * 10
+         *
+         * 90
+         * 500
+         * 70 70 0
+         * 0 0 500
+         * 100 100 2
+         * 4 8 1
+         * =========================================================== */
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(br.readLine());
+        int b = Integer.parseInt(br.readLine());
+        int i = 0;
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int[] g = new int[st.countTokens()];
+        while(st.hasMoreTokens()) g[i++] = Integer.parseInt(st.nextToken());
+
+        i = 0;
+        st = new StringTokenizer(br.readLine());
+        int[] s = new int[st.countTokens()];
+        while(st.hasMoreTokens()) s[i++] = Integer.parseInt(st.nextToken());
+
+        i = 0;
+        st = new StringTokenizer(br.readLine());
+        int[] w = new int[st.countTokens()];
+        while(st.hasMoreTokens()) w[i++] = Integer.parseInt(st.nextToken());
+
+        i = 0;
+        st = new StringTokenizer(br.readLine());
+        int[] t = new int[st.countTokens()];
+        while(st.hasMoreTokens()) t[i++] = Integer.parseInt(st.nextToken());
+
+        long result = GoldSilverCarry.solution(a, b, g, s, w, t);
+        System.out.print(result);
     }
 
 
