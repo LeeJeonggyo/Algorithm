@@ -1,5 +1,6 @@
 import Programmers.Level2.PowerGridDivideTwo;
 import Programmers.Level2.TowerOfHanoi;
+import Programmers.Level3.GameOfFindPath;
 import Programmers.Level3.GoldSilverCarry;
 import Programmers.Level3.SharedTaxiFare;
 import java.io.*;
@@ -8,7 +9,35 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        goldSilverCarrySolution();
+        gameOfFindPathSolution();
+    }
+
+    /** ===========================================================
+     * 길 찾기 게임 - 이진탐색(이분탐색)으로 해결
+     * =========================================================== */
+    private static void gameOfFindPathSolution() throws IOException{
+        /* ===========================================================
+         * TEST CASE
+         * 5 3 11 5 13 3 3 5 6 1 1 3 8 6 7 2 2 2
+         * ================================================== */
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int[][] nodeinfo = new int[st.countTokens()/2][2];
+        for(int i = 0; i < nodeinfo.length; i++){
+            nodeinfo[i] = new int[]{Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
+        }
+
+
+        int[][] result = GameOfFindPath.solution(nodeinfo);
+
+        for(int i = 0; i < nodeinfo.length; i++){
+            System.out.print(result[0][i]+" ");
+        }
+        System.out.println();
+        for(int i = 0; i < nodeinfo.length; i++){
+            System.out.print(result[1][i]+" ");
+        }
+
     }
 
 

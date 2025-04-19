@@ -14,3 +14,4 @@
 | 플랫폼     | 문제 이름        | 링크 | 풀이                                                                                                                                    |
 |-----------|----------------|------|---------------------------------------------------------------------------------------------------------------------------------------|
 | 프로그래머스  | 금과 은 운반하기   | [문제](https://school.programmers.co.kr/learn/courses/30/lessons/86053) | [풀이](https://github.com/LeeJeonggyo/Algorithm/blob/09ba522ef5f618a6c18238cecae6da3ba85c7e42/src/Programmers/Level3/GoldSilverCarry.java) |
+| 프로그래머스  | 길 찾기 게임 | [문제](https://school.programmers.co.kr/learn/courses/30/lessons/42892) | [풀이](https://github.com/LeeJeonggyo/Algorithm/blob/09ba522ef5f618a6c18238cecae6da3ba85c7e42/src/Programmers/Level3/GameOfFindPath.java) |
