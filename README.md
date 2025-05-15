@@ -57,7 +57,7 @@
 
 ## ✍️ 커밋 컨벤션 (예시)
 [Algorithm] 알고리즘 종류 <br><br>
-[BOJ-1234] 문제이름 - 해결 방식 간단 요약 <br>
+[BOJ-G4] 1234번_문제이름 - 해결 방식 간단 요약 <br>
 [PGS-Lv3] 합승 택시 요금 - Dijkstra 로 해결
 [README] README.md 파일 추가 및 갱신
 

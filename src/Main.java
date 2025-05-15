@@ -1,16 +1,62 @@
+import BOJ.Gold.G4No1253;
 import Programmers.Level2.PowerGridDivideTwo;
 import Programmers.Level2.TowerOfHanoi;
 import Programmers.Level3.GameOfFindPath;
 import Programmers.Level3.GoldSilverCarry;
 import Programmers.Level3.SharedTaxiFare;
+import Programmers.Level4.MinimizeSalesDecline;
+
 import java.io.*;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        gameOfFindPathSolution();
+        g4No1253Solution();
     }
+
+    /** ===========================================================
+     * 1253번_좋다 - 투포인터로 해결
+     * =========================================================== */
+    private static void g4No1253Solution() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        long[] data = new long[n];
+        for(int i = 0; i < n; i++){
+            data[i] = Long.parseLong(st.nextToken());
+        }
+
+        System.out.print(G4No1253.solution(n, data));
+    }
+
+
+
+//    /** ===========================================================
+//     * 매출 하락 최소화
+//     * =========================================================== */
+//    private static void minimizeSalesDeclineSolution() throws IOException{
+//        /* ===========================================================
+//         * TEST CASE
+//         * 14 17 15 18 19 14 13 16 28 17
+//         * 10 8 1 9 9 7 5 4 1 5 5 10 10 6 1 3 10 2
+//         * ================================================== */
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        StringTokenizer st = new StringTokenizer(br.readLine());
+//        int[] sales = new int[st.countTokens()];
+//        for(int i = 0; i < sales.length; i++){
+//            sales[i] = Integer.parseInt(st.nextToken());
+//        }
+//
+//        st = new StringTokenizer(br.readLine());
+//        int[][] links = new int[st.countTokens()/2][2];
+//        for(int i = 0; i < links.length; i++){
+//            links[i] = new int[]{Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
+//        }
+//
+//        System.out.print(MinimizeSalesDecline.solution(sales, links));
+//
+//    }
 
     /** ===========================================================
      * 길 찾기 게임 - 이진탐색(이분탐색)으로 해결
