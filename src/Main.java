@@ -1,4 +1,5 @@
 import BOJ.Gold.G4No1253;
+import BOJ.Gold.G5No12865;
 import BOJ.Silver.S1No6236;
 import Programmers.Level2.PowerGridDivideTwo;
 import Programmers.Level2.TowerOfHanoi;
@@ -13,12 +14,29 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        s1No6236Solution();
+        g5No12865Solution();
 
-        // DP : https://www.acmicpc.net/problem/12865
         // DP : https://www.acmicpc.net/problem/9184
         // 우선순위 큐 : https://www.acmicpc.net/problem/1766
         // 누적합 : https://www.acmicpc.net/problem/2143
+    }
+
+    /** ===========================================================
+     * 12865번_평범한 배낭 - DP로 해결
+     * =========================================================== */
+    private static void g5No12865Solution() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
+
+        int[][] obj = new int[n][2];
+        for(int i = 0; i < n; i++){
+            st = new StringTokenizer(br.readLine());
+            obj[i][0] = Integer.parseInt(st.nextToken()); // W : 무게
+            obj[i][1] = Integer.parseInt(st.nextToken()); // V : 가치
+        }
+        System.out.print(G5No12865.solution(n, k, obj));
     }
 
     /** ===========================================================
