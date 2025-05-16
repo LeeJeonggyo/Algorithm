@@ -1,6 +1,7 @@
 import BOJ.Gold.G4No1253;
 import BOJ.Gold.G5No12865;
 import BOJ.Silver.S1No6236;
+import BOJ.Silver.S2No9184;
 import Programmers.Level2.PowerGridDivideTwo;
 import Programmers.Level2.TowerOfHanoi;
 import Programmers.Level3.GameOfFindPath;
@@ -14,12 +15,21 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        g5No12865Solution();
+        s2No9184Solution();
 
         // DP : https://www.acmicpc.net/problem/9184
         // 우선순위 큐 : https://www.acmicpc.net/problem/1766
         // 누적합 : https://www.acmicpc.net/problem/2143
     }
+
+
+    /** ===========================================================
+     * 9184번_신나는 함수 실행 - DP로 해결
+     * =========================================================== */
+    private static void s2No9184Solution() throws IOException{
+        S2No9184.solution();
+    }
+
 
     /** ===========================================================
      * 12865번_평범한 배낭 - DP로 해결
