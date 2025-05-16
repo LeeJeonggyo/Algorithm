@@ -1,4 +1,5 @@
 import BOJ.Gold.G4No1253;
+import BOJ.Silver.S1No6236;
 import Programmers.Level2.PowerGridDivideTwo;
 import Programmers.Level2.TowerOfHanoi;
 import Programmers.Level3.GameOfFindPath;
@@ -12,7 +13,29 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        g4No1253Solution();
+        s1No6236Solution();
+
+        // DP : https://www.acmicpc.net/problem/12865
+        // DP : https://www.acmicpc.net/problem/9184
+        // 우선순위 큐 : https://www.acmicpc.net/problem/1766
+        // 누적합 : https://www.acmicpc.net/problem/2143
+    }
+
+    /** ===========================================================
+     * 6236번_용돈관리 - 이분 탐색으로 해결
+     * =========================================================== */
+    private static void s1No6236Solution() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
+
+        long[] data = new long[n];
+        for(int i = 0; i < n; i++){
+            data[i] = Long.parseLong(br.readLine());
+        }
+
+        System.out.print(S1No6236.solution(n, m, data));
     }
 
     /** ===========================================================
