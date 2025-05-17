@@ -1,4 +1,5 @@
 import BOJ.Gold.G2No1766;
+import BOJ.Gold.G3No2143;
 import BOJ.Gold.G4No1253;
 import BOJ.Gold.G5No12865;
 import BOJ.Silver.S1No6236;
@@ -16,10 +17,35 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        g2No1766Solution();
-
-        //https://www.acmicpc.net/problem/2143
+        g3No2143Solution();
     }
+
+    /** ===========================================================
+     * 1766번_문제집 - 우선순위 큐로 해결
+     * =========================================================== */
+    public static void g3No2143Solution() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        long t = Long.parseLong(br.readLine());
+
+        int n = Integer.parseInt(br.readLine());
+        long[] sumA = new long[n];
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        sumA[0] = Long.parseLong(st.nextToken());
+        for(int i = 1; i < n; i++){
+            sumA[i] = sumA[i-1] + Long.parseLong(st.nextToken());
+        }
+
+        int m = Integer.parseInt(br.readLine());
+        long[] sumB = new long[m];
+        st = new StringTokenizer(br.readLine());
+        sumB[0] = Long.parseLong(st.nextToken());
+        for(int i = 1; i < m; i++){
+            sumB[i] = sumB[i-1] + Long.parseLong(st.nextToken());
+        }
+
+        System.out.print(G3No2143.solution(t, n, m, sumA, sumB));
+    }
+
 
     /** ===========================================================
      * 1766번_문제집 - 우선순위 큐로 해결
