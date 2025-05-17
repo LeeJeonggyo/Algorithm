@@ -17,11 +17,35 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        g3No2143Solution();
+        g3No2143Solution2();
     }
 
     /** ===========================================================
-     * 1766번_문제집 - 우선순위 큐로 해결
+     * 2143번_두 배열의 합 - Map 과 구분합으로 해결
+     * =========================================================== */
+    public static void g3No2143Solution2() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        long t = Long.parseLong(br.readLine());
+
+        int n = Integer.parseInt(br.readLine());
+        long[] a = new long[n];
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        for(int i = 0; i < n; i++){
+            a[i] = Long.parseLong(st.nextToken());
+        }
+
+        int m = Integer.parseInt(br.readLine());
+        long[] b = new long[m];
+        st = new StringTokenizer(br.readLine());
+        for(int i = 0; i < m; i++){
+            b[i] = Long.parseLong(st.nextToken());
+        }
+
+        System.out.print(G3No2143.solution2(t, n, m, a, b));
+    }
+
+    /** ===========================================================
+     * 2143번_두 배열의 합 - 세그먼트 트리로 해결
      * =========================================================== */
     public static void g3No2143Solution() throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

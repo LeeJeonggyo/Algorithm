@@ -123,4 +123,40 @@ public class G3No2143 {
             return findCount(root.childLeft, sumVal, start, mid);
         }
     }
+
+
+
+    public static long solution2(long t, int n, int m, long[] a, long[] b){
+        long result = 0L;
+
+        Map<Long, Long> bSepSumCntMap = new HashMap<>();
+        for(long bSum : allSepSumList(b)){
+            Long cnt = bSepSumCntMap.get(bSum) == null ? 1 : bSepSumCntMap.get(bSum)+1;
+//            long cnt = bSepSumCntMap.getOrDefault(bSum, 0L);
+            bSepSumCntMap.put(bSum, cnt);
+        }
+
+        for(long aSum : allSepSumList(a)){
+            long bFind = t - aSum;
+            if(bSepSumCntMap.get(bFind) != null){
+                result += bSepSumCntMap.get(bFind);
+            }
+        }
+
+        return result;
+    }
+
+    private static List<Long> allSepSumList(long[] sumArr){
+        List<Long> result = new ArrayList<>();
+
+        for(int i = 0; i < sumArr.length; i++){
+            long sum = 0L;
+            for(int j = i; j < sumArr.length; j++){
+                sum += sumArr[j];
+                result.add(sum);
+            }
+        }
+
+        return result;
+    }
 }
