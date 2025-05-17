@@ -1,3 +1,4 @@
+import BOJ.Gold.G2No1766;
 import BOJ.Gold.G4No1253;
 import BOJ.Gold.G5No12865;
 import BOJ.Silver.S1No6236;
@@ -15,11 +16,29 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        s2No9184Solution();
+        g2No1766Solution();
 
-        // DP : https://www.acmicpc.net/problem/9184
-        // 우선순위 큐 : https://www.acmicpc.net/problem/1766
-        // 누적합 : https://www.acmicpc.net/problem/2143
+        //https://www.acmicpc.net/problem/2143
+    }
+
+    /** ===========================================================
+     * 1766번_문제집 - 우선순위 큐로 해결
+     * =========================================================== */
+    public static void g2No1766Solution() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
+
+        int[][] data = new int[m][2];
+        for(int i = 0; i < m; i++){
+            st = new StringTokenizer(br.readLine());
+            data[i][0] = Integer.parseInt(st.nextToken());
+            data[i][1] = Integer.parseInt(st.nextToken());
+        }
+
+        System.out.print(G2No1766.solution(n, m, data));
     }
 
 
