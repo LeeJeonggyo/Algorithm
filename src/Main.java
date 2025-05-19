@@ -17,7 +17,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        g3No2143Solution2();
+        minimizeSalesDeclineSolution();
     }
 
     /** ===========================================================
@@ -152,31 +152,31 @@ public class Main {
 
 
 
-//    /** ===========================================================
-//     * 매출 하락 최소화
-//     * =========================================================== */
-//    private static void minimizeSalesDeclineSolution() throws IOException{
-//        /* ===========================================================
-//         * TEST CASE
-//         * 14 17 15 18 19 14 13 16 28 17
-//         * 10 8 1 9 9 7 5 4 1 5 5 10 10 6 1 3 10 2
-//         * ================================================== */
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        StringTokenizer st = new StringTokenizer(br.readLine());
-//        int[] sales = new int[st.countTokens()];
-//        for(int i = 0; i < sales.length; i++){
-//            sales[i] = Integer.parseInt(st.nextToken());
-//        }
-//
-//        st = new StringTokenizer(br.readLine());
-//        int[][] links = new int[st.countTokens()/2][2];
-//        for(int i = 0; i < links.length; i++){
-//            links[i] = new int[]{Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
-//        }
-//
-//        System.out.print(MinimizeSalesDecline.solution(sales, links));
-//
-//    }
+    /** ===========================================================
+     * 매출 하락 최소화 - dfs 로 해결
+     * =========================================================== */
+    private static void minimizeSalesDeclineSolution() throws IOException{
+        /* ===========================================================
+         * TEST CASE
+         * 14 17 15 18 19 14 13 16 28 17
+         * 10 8 1 9 9 7 5 4 1 5 5 10 10 6 1 3 10 2
+         * ================================================== */
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int[] sales = new int[st.countTokens()];
+        for(int i = 0; i < sales.length; i++){
+            sales[i] = Integer.parseInt(st.nextToken());
+        }
+
+        st = new StringTokenizer(br.readLine());
+        int[][] links = new int[st.countTokens()/2][2];
+        for(int i = 0; i < links.length; i++){
+            links[i] = new int[]{Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
+        }
+
+        System.out.print(MinimizeSalesDecline.solution(sales, links));
+
+    }
 
     /** ===========================================================
      * 길 찾기 게임 - 이진탐색(이분탐색)으로 해결
