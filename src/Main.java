@@ -2,6 +2,7 @@ import BOJ.Gold.G2No1766;
 import BOJ.Gold.G3No2143;
 import BOJ.Gold.G4No1253;
 import BOJ.Gold.G5No12865;
+import BOJ.Silver.S1No14889;
 import BOJ.Silver.S1No6236;
 import BOJ.Silver.S2No9184;
 import Programmers.Level2.PowerGridDivideTwo;
@@ -17,7 +18,24 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        minimizeSalesDeclineSolution();
+        s1No14889Solution();
+    }
+
+    /** ===========================================================
+     * 14889번_스타트와 링크 - 조합으로 해결
+     * =========================================================== */
+    public static void s1No14889Solution() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        int[][] power = new int[n][n];
+        for(int i = 0; i < n; i++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            for(int j = 0; j < n; j++){
+                power[i][j] = Integer.parseInt(st.nextToken());
+            }
+        }
+
+        System.out.print(S1No14889.solution(n, power));
     }
 
     /** ===========================================================
