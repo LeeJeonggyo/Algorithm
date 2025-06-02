@@ -7,6 +7,7 @@ import BOJ.Silver.S1No6236;
 import BOJ.Silver.S2No9184;
 import Programmers.Level2.PowerGridDivideTwo;
 import Programmers.Level2.TowerOfHanoi;
+import Programmers.Level3.ChangeWord;
 import Programmers.Level3.GameOfFindPath;
 import Programmers.Level3.GoldSilverCarry;
 import Programmers.Level3.SharedTaxiFare;
@@ -18,7 +19,24 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException{
         System.out.println("Hello world!");
-        s1No14889Solution();
+        changeWordSolution();
+    }
+
+    /** ===========================================================
+     * 단어변환 - 다익스트라 알고리즘으로 해결 -> BFS 로 구현하는것도 가능하다.
+     * =========================================================== */
+    public static void changeWordSolution() throws IOException{
+        /* ===========================================================
+         * TEST CASE
+         * hit
+         * cog
+         * hot dot dog lot log cog
+         * =========================================================== */
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String begin = br.readLine();
+        String target = br.readLine();
+        String[] words = br.readLine().split(" ");
+        System.out.print(ChangeWord.solution(begin, target, words));
     }
 
     /** ===========================================================
