@@ -36,7 +36,8 @@ public class Main {
         String begin = br.readLine();
         String target = br.readLine();
         String[] words = br.readLine().split(" ");
-        System.out.print(ChangeWord.solution(begin, target, words));
+//        System.out.print(ChangeWord.solution(begin, target, words)); // 다익스트라 알고리즘 구현
+        System.out.print(ChangeWord.solution2(begin, target, words)); // BFS 구현
     }
 
     /** ===========================================================

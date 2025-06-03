@@ -24,6 +24,7 @@ public class ChangeWord {
         }
     }
 
+    // 다익스트라 알고리즘 구현
     public static int solution(String begin, String target, String[] words) {
         int answer = 0;
 
@@ -114,5 +115,61 @@ public class ChangeWord {
                 pq.add(new Node(conNode, shortDistanceArr[conNode]));
             }
         }
+    }
+
+
+    static boolean[] bfsVisit;
+    static Queue<String> bfsQ = new LinkedList<>();
+    /**
+     * BFS 구현
+     * @param begin String: 시작문자열
+     * @param target String: 최종도착 문자열
+     * @param words String[]: 문자열 배열
+     * @return int: begin 에서 target 까지 변화를 위해 거쳐가는 단어 갯수
+     */
+    public static int solution2(String begin, String target, String[] words) {
+        int answer = 0;
+
+        //1. 데이터 초기화
+        bfsVisit = new boolean[words.length]; //방문 배열 초기화
+        bfsQ.add(begin); //처음 시작 문자열 등록
+
+        //2. bfs
+        while(!bfsQ.isEmpty()){
+            answer++;
+            int qSize = bfsQ.size();
+            for(int i = 0 ; i < qSize; i++){
+                String thisStr = bfsQ.poll();
+                for(int j = 0; j < words.length; j++){
+                    String thisWord = words[j];
+                    //1. words 에서 begin 과 1글자만 다른 문자열을 찾는다.
+                    if(checkNextWord(thisStr, thisWord)){
+                        //2. 해당 문자열이 방문한 적이 있는 문자열인지 확인한다.
+                        //3. 방문한적이 있는 경우, continue
+                        if(bfsVisit[j]) continue;
+                            //4. 방문한 적이 없으며, target 과 같은 단어일 경우, 결과를 반환한다.
+                        else if(thisWord.equals(target)) return answer;
+                            //5. 방문한 적이 없고, target 과도 다르면, 방문처리 후, 큐에 해당 문자열을 넣는다.
+                        else {
+                            bfsVisit[j] = true;
+                            bfsQ.add(thisWord);
+                        }
+                    }
+                }
+            }
+        }
+
+        return 0;
+    }
+
+    private static boolean checkNextWord(String stand, String word){
+        char[] standCharArr = stand.toCharArray();
+        char[] wordCharArr = word.toCharArray();
+
+        int cnt = 0;
+        for(int i = 0 ; i < standCharArr.length; i++){
+            if(standCharArr[i] != wordCharArr[i]) cnt++;
+        }
+        return cnt == 1;
     }
 }
